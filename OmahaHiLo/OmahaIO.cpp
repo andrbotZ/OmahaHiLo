@@ -16,6 +16,18 @@ bool OmahaIO::OpenFile(string path)
 	return false;
 }
 
+bool OmahaIO::CreateFile(string path)
+{
+
+	_inputFile.open(path, std::fstream::out);
+
+	if (_inputFile.is_open()) {
+		return true;
+	}
+
+	return false;
+}
+
 bool OmahaIO::CloseFile()
 {
 	_inputFile.close();
@@ -55,5 +67,22 @@ list<string> OmahaIO::getData()
 {
 
 	return _lines;
+}
+
+void OmahaIO::SaveResultsInFile(vector<string> lines, string path)
+{
+	if (CreateFile(path)) {
+
+		string line;
+
+		if (_inputFile.is_open()) {
+
+			for (vector<string>::iterator it = lines.begin(); it != lines.end(); ++it) {
+				string line = *it;
+				_inputFile << line << endl;
+			}
+		}
+	}
+
 }
 

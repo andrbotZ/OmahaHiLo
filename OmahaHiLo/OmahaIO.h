@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include <list>
+#include <vector>
 
 using namespace std;
 
@@ -17,4 +18,6 @@ private:
 		void ReadFile();
 		void PrintData();
 		list<string> getData();
+		bool CreateFile(string path);
+		void SaveResultsInFile(vector<string> lines, string path);
 };

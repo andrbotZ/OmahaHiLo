@@ -87,9 +87,6 @@
     <ClCompile Include="HighCard.cpp">
       <Filter>Source Files\Rank</Filter>
     </ClCompile>
-    <ClCompile Include="OmahaHiLo.cpp">
-      <Filter>Source Files\Rank</Filter>
-    </ClCompile>
     <ClCompile Include="OnePair.cpp">
       <Filter>Source Files\Rank</Filter>
     </ClCompile>
@@ -101,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="TwoPair.cpp">
       <Filter>Source Files\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="OmahaHiLo.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

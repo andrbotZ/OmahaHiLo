@@ -15,6 +15,6 @@ class OmahaBoard {
 	public:
 		void DealCards(list<string> data);
 		void Play();
-		void PrintResults();
-		void SaveResultsInFile(string path);
+		vector<string> PrintResults();
+
 };

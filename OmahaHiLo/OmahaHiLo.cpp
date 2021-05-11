@@ -4,6 +4,8 @@
 #include <iostream>
 #include "OmahaIO.h"
 #include "OmahaBoard.h"
+#include <string>
+#include <vector>
 
 
 
@@ -20,8 +22,8 @@ int main()
 
         omahaBoard.DealCards(omahoIO.getData());
         omahaBoard.Play();
-        omahaBoard.PrintResults();
-        omahaBoard.SaveResultsInFile("C:/Users/pocht/Desktop/jobs/iGates/OmahaHiLo/input.txt");
+        vector<string> lines = omahaBoard.PrintResults();
+        omahoIO.SaveResultsInFile(lines, "C:/Users/pocht/Desktop/jobs/iGates/OmahaHiLo/output.txt");
     }
    
 

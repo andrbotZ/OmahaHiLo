@@ -47,12 +47,15 @@ void OmahaGame::Play() {
  
 }
 
-void OmahaGame::PrintResult() {
-
-	std::cout << winnerHighestRank.name + " " + winnerHighestRank.rank.HighestRank + ";" + winnerLowestRank.name + " " + winnerLowestRank.rank.LowestRank << '\n';
-
+string OmahaGame::PrintResult() {
+	string result = winnerHighestRank.name + " " + winnerHighestRank.rank.GetHighestRank() + ";" + winnerLowestRank.name + " " + winnerLowestRank.rank.GetLowestRank();
+	std::cout << winnerHighestRank.name + " " + winnerHighestRank.rank.GetHighestRank() + ";" + winnerLowestRank.name + " " + winnerLowestRank.rank.GetLowestRank() << '\n';
+	return result;
 }
 
 int OmahaGame::getHighestWinner(OmahaHand player1, OmahaHand player2) {
-	player1.rank.CompareHighestRank(player2.rank.HighestRank);
+	if (player1.rank.CompareHighestRank(player2.rank.HighestRank)) {
+		return 2;
+	}
+	return 1;
 }

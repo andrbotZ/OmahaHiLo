@@ -2,6 +2,7 @@
 #include <iostream>
 
 
+static const char* enum_str[] = { "Straight Flush", "Four Of Kind", "Full House", "Flush", "Straight", "Three Of Kind", "Two Pair", "One Pair", "High Card" };
 
 void Rank::UpdateHighest(vector<Card> playerCards)
 {
@@ -19,17 +20,36 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 	bool isFullHouse = fullHouse.Validate(playerCards);
 
 }
+ 
 
 void Rank::UpdateLowest(vector<Card> cards)
 {
-	std::cout << cards[0].rank + cards[0].suit + "-" + cards[1].rank + cards[1].suit + "-" + cards[2].rank + cards[2].suit + "-" + cards[3].rank + cards[3].suit + "-" + cards[4].rank + cards[4].suit << '\n';
+	// std::cout << cards[0].rank + cards[0].suit + "-" + cards[1].rank + cards[1].suit + "-" + cards[2].rank + cards[2].suit + "-" + cards[3].rank + cards[3].suit + "-" + cards[4].rank + cards[4].suit << '\n';
 }
 
 bool Rank::CompareHighestRank(RankType rank)
 {
-	
+	int one = static_cast<int>(HighestRank);
+	int two = static_cast<int>(rank);
+	if (one > two) return true;
+
 	return false;
 }
+
+string Rank::GetHighestRank()
+{
+	string rank{ enum_str[HighestRank] };
+	return rank;
+}
+
+string Rank::GetLowestRank()
+{
+
+	string rank{ enum_str[LowestRank] };
+	return rank;
+}
+
+ 
 
 vector<Card> Rank::SortCards(vector<Card> cards)
 {

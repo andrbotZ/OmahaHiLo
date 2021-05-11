@@ -24,5 +24,5 @@ class OmahaGame {
 		OmahaGame(vector<string> playersNames, string boardName);
 		void DealCards(string data);
 		void Play();
-		void PrintResult();
+		string PrintResult();
 };
