@@ -14,7 +14,7 @@ OmahaGame::OmahaGame(vector<string> playersNames, string boardName)
 	
 }
 
-void OmahaGame::FlopAction(string data)
+void OmahaGame::DealCards(string data)
 {
 	for (map<string, OmahaHand>::iterator it = _players.begin(); it != _players.end(); ++it) {
 		OmahaHand player = it -> second;

@@ -13,7 +13,7 @@ class OmahaBoard {
 		vector<OmahaGame> games;
 
 	public:
-		void FlopAction(list<string> data);
+		void DealCards(list<string> data);
 		void Play();
 		void PrintResults();
 		void SaveResultsInFile(string path);

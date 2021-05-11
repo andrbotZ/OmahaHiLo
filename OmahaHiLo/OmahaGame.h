@@ -13,8 +13,9 @@ class OmahaGame {
 		map<string,OmahaHand> _players;
 		OmahaHand _board;
 
+
 	public:
 		OmahaGame(vector<string> playersNames, string boardName);
-		void FlopAction(string data);
+		void DealCards(string data);
 		void Play();
 };

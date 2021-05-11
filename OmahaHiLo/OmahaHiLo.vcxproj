@@ -145,6 +145,7 @@
     <ClCompile Include="OmahaHand.cpp" />
     <ClCompile Include="OmahaHiLo.cpp" />
     <ClCompile Include="OmahaIO.cpp" />
+    <ClCompile Include="Rank.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
@@ -152,6 +153,7 @@
     <ClInclude Include="OmahaGame.h" />
     <ClInclude Include="OmahaHand.h" />
     <ClInclude Include="OmahaIO.h" />
+    <ClInclude Include="Rank.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

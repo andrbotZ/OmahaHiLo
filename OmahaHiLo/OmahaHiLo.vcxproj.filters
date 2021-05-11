@@ -43,6 +43,12 @@
     <Filter Include="Source Files\Card">
       <UniqueIdentifier>{c32e23d2-db11-43ec-a1bf-d40c49d69de5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Rank">
+      <UniqueIdentifier>{4be0cd10-0a79-4c1f-b122-3107445af423}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rank">
+      <UniqueIdentifier>{2a338a38-06f6-4e54-aedc-0c48f6d8feeb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OmahaHiLo.cpp">
@@ -63,6 +69,9 @@
     <ClCompile Include="Card.cpp">
       <Filter>Source Files\Card</Filter>
     </ClCompile>
+    <ClCompile Include="Rank.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OmahaIO.h">
@@ -79,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="Card.h">
       <Filter>Header Files\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="Rank.h">
+      <Filter>Header Files\Rank</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

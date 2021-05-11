@@ -18,7 +18,7 @@ int main()
         omahoIO.CloseFile();
         omahoIO.PrintData();
 
-        omahaBoard.FlopAction(omahoIO.getData());
+        omahaBoard.DealCards(omahoIO.getData());
         omahaBoard.Play();
         omahaBoard.PrintResults();
         omahaBoard.SaveResultsInFile("C:/Users/pocht/Desktop/jobs/iGates/OmahaHiLo/input.txt");
