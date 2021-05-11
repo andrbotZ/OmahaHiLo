@@ -1,5 +1,6 @@
 #include "OmahaHand.h"
 
-OmahaHand::OmahaHand(string playerName, string cards)
+OmahaHand::OmahaHand(string playerName)
 {
+	name = playerName;
 }

@@ -5,5 +5,9 @@ using namespace std;
 class OmahaHand {
 
 	public:
-		OmahaHand(string playerName, string cards);
+		string name;
+
+	public:
+		OmahaHand() {};
+		OmahaHand(string playerName);
 };
