@@ -10,5 +10,24 @@ void OmahaBoard::FlopAction(list<string> data)
 		OmahaGame game(_players,_board);
 		string data = *_line;
 		game.FlopAction(data);
+		games.push_back(game);
 	}
+}
+
+void OmahaBoard::Play()
+{
+	for (vector<OmahaGame>::iterator _game_iterator = games.begin(); _game_iterator != games.end(); ++_game_iterator) {
+		OmahaGame game = *_game_iterator;
+		game.Play();
+	
+	}
+
+}
+
+void OmahaBoard::PrintResults()
+{
+}
+
+void OmahaBoard::SaveResultsInFile(string path)
+{
 }

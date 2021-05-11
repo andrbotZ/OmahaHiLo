@@ -16,4 +16,5 @@ class OmahaGame {
 	public:
 		OmahaGame(vector<string> playersNames, string boardName);
 		void FlopAction(string data);
+		void Play();
 };

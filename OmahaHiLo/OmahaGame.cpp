@@ -3,9 +3,6 @@
 
 OmahaGame::OmahaGame(vector<string> playersNames, string boardName)
 {
- // HandA:Ac - Kd - Jd - 3d HandB : 5c - 5d - 6c - 7d Board : Ah - Kh - 5s - 2s - Qd
-
-
 	_board = OmahaHand{ boardName };
 	for (vector<string>::iterator it = playersNames.begin(); it != playersNames.end(); ++it) {
 		string _player = *it;
@@ -25,6 +22,15 @@ void OmahaGame::FlopAction(string data)
 		regex handARegex (player.name + ":(\\S*)");
 		bool find = regex_search(data.c_str(), handAMatch, handARegex);
 		player.setCards(handAMatch[1].str());
+		_players.at(player.name) = player;
 	}
-			
+
+	cmatch handAMatch;
+	regex handARegex(_board.name + ":(\\S*)");
+	bool find = regex_search(data.c_str(), handAMatch, handARegex);
+	_board.setCards(handAMatch[1].str());
+}
+
+void OmahaGame::Play() {
+
 }
