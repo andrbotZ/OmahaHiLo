@@ -140,6 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="OmahaHiLo.cpp" />
+    <ClCompile Include="OmahaIO.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OmahaIO.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
