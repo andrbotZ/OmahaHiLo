@@ -140,24 +140,40 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
+    <ClCompile Include="Flush.cpp" />
+    <ClCompile Include="FourOfKind.cpp" />
+    <ClCompile Include="FullHouse.cpp" />
+    <ClCompile Include="HighCard.cpp" />
     <ClCompile Include="OmahaBoard.cpp" />
     <ClCompile Include="OmahaGame.cpp" />
     <ClCompile Include="OmahaHand.cpp" />
     <ClCompile Include="OmahaHiLo.cpp" />
     <ClCompile Include="OmahaIO.cpp" />
+    <ClCompile Include="OnePair.cpp" />
     <ClCompile Include="Rank.cpp" />
     <ClCompile Include="RoyalFlush.cpp" />
+    <ClCompile Include="Straight.cpp" />
     <ClCompile Include="StraightFlush.cpp" />
+    <ClCompile Include="ThreeOfKind.cpp" />
+    <ClCompile Include="TwoPair.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
+    <ClInclude Include="Flush.h" />
+    <ClInclude Include="FourOfKind.h" />
+    <ClInclude Include="FullHouse.h" />
+    <ClInclude Include="HighCard.h" />
     <ClInclude Include="OmahaBoard.h" />
     <ClInclude Include="OmahaGame.h" />
     <ClInclude Include="OmahaHand.h" />
     <ClInclude Include="OmahaIO.h" />
+    <ClInclude Include="OnePair.h" />
     <ClInclude Include="Rank.h" />
     <ClInclude Include="RoyalFlush.h" />
+    <ClInclude Include="Straight.h" />
     <ClInclude Include="StraightFlush.h" />
+    <ClInclude Include="ThreeOfKind.h" />
+    <ClInclude Include="TwoPair.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

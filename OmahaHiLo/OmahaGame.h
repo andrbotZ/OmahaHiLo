@@ -14,10 +14,15 @@ class OmahaGame {
 		map<string,OmahaHand> _players;
 		OmahaHand _board;
 		Rank _rank;
+	private:
+		int getHighestWinner(OmahaHand player1, OmahaHand player2);
 
-
+	public:
+		OmahaHand winnerHighestRank;
+		OmahaHand winnerLowestRank;
 	public:
 		OmahaGame(vector<string> playersNames, string boardName);
 		void DealCards(string data);
 		void Play();
+		void PrintResult();
 };

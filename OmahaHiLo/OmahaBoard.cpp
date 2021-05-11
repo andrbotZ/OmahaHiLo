@@ -26,6 +26,11 @@ void OmahaBoard::Play()
 
 void OmahaBoard::PrintResults()
 {
+	for (vector<OmahaGame>::iterator _game_iterator = games.begin(); _game_iterator != games.end(); ++_game_iterator) {
+		OmahaGame game = *_game_iterator;
+		game.PrintResult();
+
+	}
 }
 
 void OmahaBoard::SaveResultsInFile(string path)

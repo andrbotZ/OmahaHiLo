@@ -1,4 +1,5 @@
 #include "OmahaGame.h"
+#include <iostream>
 
 
 OmahaGame::OmahaGame(vector<string> playersNames, string boardName)
@@ -37,6 +38,21 @@ void OmahaGame::Play() {
 	
 		player.CombineCards(_board.cards);
 
+		int winnerNum = getHighestWinner(winnerHighestRank, player);
+		if (winnerNum == 2) winnerHighestRank = player;
 		_players.at(player.name) = player;
+
+
 	}
+ 
+}
+
+void OmahaGame::PrintResult() {
+
+	std::cout << winnerHighestRank.name + " " + winnerHighestRank.rank.HighestRank + ";" + winnerLowestRank.name + " " + winnerLowestRank.rank.LowestRank << '\n';
+
+}
+
+int OmahaGame::getHighestWinner(OmahaHand player1, OmahaHand player2) {
+	player1.rank.CompareHighestRank(player2.rank.HighestRank);
 }

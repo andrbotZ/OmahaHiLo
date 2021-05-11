@@ -51,9 +51,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="OmahaHiLo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="OmahaIO.cpp">
       <Filter>Source Files\IOFile</Filter>
     </ClCompile>
@@ -76,6 +73,33 @@
       <Filter>Source Files\Rank</Filter>
     </ClCompile>
     <ClCompile Include="StraightFlush.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="FourOfKind.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="Flush.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="FullHouse.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="HighCard.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="OmahaHiLo.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="OnePair.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="Straight.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreeOfKind.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoPair.cpp">
       <Filter>Source Files\Rank</Filter>
     </ClCompile>
   </ItemGroup>
@@ -102,6 +126,30 @@
       <Filter>Header Files\Rank</Filter>
     </ClInclude>
     <ClInclude Include="StraightFlush.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="FourOfKind.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="Flush.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="FullHouse.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="HighCard.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="OnePair.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="Straight.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreeOfKind.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="TwoPair.h">
       <Filter>Header Files\Rank</Filter>
     </ClInclude>
   </ItemGroup>

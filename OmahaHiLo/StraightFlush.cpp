@@ -13,12 +13,13 @@ bool StraightFlush::Validate(vector<Card> cards)
 	}
  
 	if (regex_search(suit.c_str(), _suitMatch, _suitRegex)) {
+		int sum = 0;
 		for (int i = 0; i < cards.size() - 1; i++)
 		{
 			if (cards[i].value - cards[i + 1].value != 1) break;
-			isSequantial = true;
+			sum++;
 		}
-		return isSequantial;
+		if (sum == 4) isSequantial = true;
 	}
-	return false;
+	return isSequantial;
 }
