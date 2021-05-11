@@ -49,3 +49,11 @@ void OmahaIO::PrintData()
 			std::cout << *it << '\n';	
 	}
 }
+
+
+list<string> OmahaIO::getData()
+{
+
+	return _lines;
+}
+

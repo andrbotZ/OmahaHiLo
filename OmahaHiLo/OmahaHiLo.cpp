@@ -3,18 +3,23 @@
 
 #include <iostream>
 #include "OmahaIO.h"
+#include "OmahaBoard.h"
 
 
 
 int main()
 {
     OmahaIO omahoIO;
+    OmahaBoard omahaBoard;
 
     bool isOpened = omahoIO.OpenFile("C:/Users/pocht/Desktop/jobs/iGates/OmahaHiLo/input.txt");
     if (isOpened) {
         omahoIO.ReadFile();
         omahoIO.CloseFile();
         omahoIO.PrintData();
+
+        omahaBoard.FlopAction(omahoIO.getData());
+
     }
    
 

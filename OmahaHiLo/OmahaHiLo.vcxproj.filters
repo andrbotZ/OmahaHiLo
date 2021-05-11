@@ -16,18 +16,33 @@
     <Filter Include="Header Files\IOFile">
       <UniqueIdentifier>{455bb454-90ae-4258-8606-a64f7c7a6e8b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\IOFile">
+      <UniqueIdentifier>{8509b659-779d-4ddc-9c4b-f3621253225e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Board">
+      <UniqueIdentifier>{fbc762bc-3c33-4e97-b1c6-79a9d89ca24d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Board">
+      <UniqueIdentifier>{4dda6baa-ffb9-4a13-8dec-644a3e978cb8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OmahaHiLo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="OmahaIO.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\IOFile</Filter>
+    </ClCompile>
+    <ClCompile Include="OmahaBoard.cpp">
+      <Filter>Source Files\Board</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OmahaIO.h">
       <Filter>Header Files\IOFile</Filter>
+    </ClInclude>
+    <ClInclude Include="OmahaBoard.h">
+      <Filter>Header Files\Board</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

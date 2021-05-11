@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="OmahaBoard.cpp" />
     <ClCompile Include="OmahaHiLo.cpp" />
     <ClCompile Include="OmahaIO.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="OmahaBoard.h" />
     <ClInclude Include="OmahaIO.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

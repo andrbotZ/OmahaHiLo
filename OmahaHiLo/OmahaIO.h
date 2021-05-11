@@ -16,6 +16,5 @@ private:
 		bool CloseFile();
 		void ReadFile();
 		void PrintData();
-
-
+		list<string> getData();
 };
