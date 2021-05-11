@@ -72,6 +72,9 @@
     <ClCompile Include="Rank.cpp">
       <Filter>Source Files\Rank</Filter>
     </ClCompile>
+    <ClCompile Include="RoyalFlush.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OmahaIO.h">
@@ -90,6 +93,9 @@
       <Filter>Header Files\Card</Filter>
     </ClInclude>
     <ClInclude Include="Rank.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="RoyalFlush.h">
       <Filter>Header Files\Rank</Filter>
     </ClInclude>
   </ItemGroup>

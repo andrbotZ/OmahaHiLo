@@ -19,5 +19,5 @@ class OmahaHand {
 		OmahaHand() {};
 		OmahaHand(string playerName);
 		void DealCards(string cards);
-		void CombineCards(vector<Card> cards);
+		void CombineCards(vector<Card> boardCards);
 };

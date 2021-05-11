@@ -17,10 +17,9 @@ void OmahaHand::DealCards(string cardsChain)
 		Card card{ match.str() };
 		cards.push_back(card);
     }
-	rank.Update(cards);
 }
 
-void OmahaHand::CombineCards(vector<Card> cards)
+void OmahaHand::CombineCards(vector<Card> boardCards)
 {
-
+	rank.Update(cards, boardCards);
 }
