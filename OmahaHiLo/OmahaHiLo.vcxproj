@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Card.cpp" />
     <ClCompile Include="OmahaBoard.cpp" />
     <ClCompile Include="OmahaGame.cpp" />
     <ClCompile Include="OmahaHand.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="OmahaIO.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Card.h" />
     <ClInclude Include="OmahaBoard.h" />
     <ClInclude Include="OmahaGame.h" />
     <ClInclude Include="OmahaHand.h" />

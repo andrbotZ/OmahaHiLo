@@ -2,6 +2,7 @@
 #include <string>
 #include<map>
 #include "OmahaHand.h"
+#include <vector>
 #include <regex>
 
 using namespace std;
@@ -13,6 +14,6 @@ class OmahaGame {
 		OmahaHand _board;
 
 	public:
-		OmahaGame(string playersNames[], string boardName);
+		OmahaGame(vector<string> playersNames, string boardName);
 		void FlopAction(string data);
 };
