@@ -25,6 +25,18 @@
     <Filter Include="Source Files\Board">
       <UniqueIdentifier>{4dda6baa-ffb9-4a13-8dec-644a3e978cb8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Hand">
+      <UniqueIdentifier>{1ea952cc-4669-448c-b3bd-fe364b6c169c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Hand">
+      <UniqueIdentifier>{d0ea5caa-d7ec-4b7d-a680-30049db6e112}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{305af574-1e28-46ce-a38c-f6cd195091e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{cf14dc71-9ca8-4706-9d65-357141003a44}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OmahaHiLo.cpp">
@@ -36,6 +48,12 @@
     <ClCompile Include="OmahaBoard.cpp">
       <Filter>Source Files\Board</Filter>
     </ClCompile>
+    <ClCompile Include="OmahaHand.cpp">
+      <Filter>Source Files\Hand</Filter>
+    </ClCompile>
+    <ClCompile Include="OmahaGame.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OmahaIO.h">
@@ -43,6 +61,12 @@
     </ClInclude>
     <ClInclude Include="OmahaBoard.h">
       <Filter>Header Files\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="OmahaHand.h">
+      <Filter>Header Files\Hand</Filter>
+    </ClInclude>
+    <ClInclude Include="OmahaGame.h">
+      <Filter>Header Files\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
