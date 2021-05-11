@@ -3,9 +3,9 @@
 
 void Rank::UpdateHighest(vector<Card> playerCards)
 {
-	//highest,lowest
 	RoyalFlush royalFlush;
-	royalFlush.Validate(playerCards);
+	bool isRoyalFlush = royalFlush.Validate(playerCards);
+
 }
 
 void Rank::UpdateLowest(vector<Card> cards)

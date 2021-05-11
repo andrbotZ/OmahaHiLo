@@ -20,4 +20,6 @@ class OmahaHand {
 		OmahaHand(string playerName);
 		void DealCards(string cards);
 		void CombineCards(vector<Card> boardCards);
+		void SortCards();
+		vector<Card> SortCards(vector<Card> cards);
 };

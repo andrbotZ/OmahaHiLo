@@ -14,6 +14,7 @@ class Card
 	public:
 		string suit;
 		string rank;
+		int value;
 
 	public:
 		Card(string card);

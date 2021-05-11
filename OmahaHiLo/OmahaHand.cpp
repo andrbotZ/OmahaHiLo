@@ -17,6 +17,7 @@ void OmahaHand::DealCards(string cardsChain)
 		Card card{ match.str() };
 		cards.push_back(card);
     }
+	SortCards();
 }
 
 void OmahaHand::CombineCards(vector<Card> boardCards)
@@ -33,6 +34,7 @@ void OmahaHand::CombineCards(vector<Card> boardCards)
 					tempCards.push_back(boardCards[j2]);
 					for (int j3 = j2 + 1; j3 < boardCards.size(); j3++) {
 						tempCards.push_back(boardCards[j3]);
+						tempCards = SortCards(tempCards);
 						rank.UpdateHighest(tempCards);
 						rank.UpdateLowest(tempCards);
 						tempCards.pop_back();
@@ -46,4 +48,33 @@ void OmahaHand::CombineCards(vector<Card> boardCards)
 		tempCards.pop_back();
 	}
 
+}
+
+void OmahaHand::SortCards()
+{
+	for (int i = 0; i < cards.size() - 1; i ++) {
+		for (int j = 0; j < cards.size() - i - 1; j++) {
+			if (cards[j].value < cards[j + 1].value) {
+				Card tempCard { cards[j].rank + cards[j].suit };
+				cards[j] = cards[j + 1];
+				cards[j + 1] = tempCard;
+			}
+		}
+
+	}
+}
+
+vector<Card> OmahaHand::SortCards(vector<Card> cards)
+{
+	for (int i = 0; i < cards.size() - 1; i++) {
+		for (int j = 0; j < cards.size() - i - 1; j++) {
+			if (cards[j].value < cards[j + 1].value) {
+				Card tempCard{ cards[j].rank + cards[j].suit };
+				cards[j] = cards[j + 1];
+				cards[j + 1] = tempCard;
+			}
+		}
+
+	}
+	return cards;
 }
