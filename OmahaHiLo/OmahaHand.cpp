@@ -5,7 +5,7 @@ OmahaHand::OmahaHand(string playerName)
 	name = playerName;
 }
 
-void OmahaHand::setCards(string cardsChain)
+void OmahaHand::DealCards(string cardsChain)
 {
 	cmatch cardMatch;
 	regex cardARegex("([cdhsAKQJ0123456789]{2,3})");
@@ -17,4 +17,10 @@ void OmahaHand::setCards(string cardsChain)
 		Card card{ match.str() };
 		cards.push_back(card);
     }
+	rank.Update(cards);
+}
+
+void OmahaHand::CombineCards(vector<Card> cards)
+{
+
 }
