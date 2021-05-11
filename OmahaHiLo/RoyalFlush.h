@@ -5,6 +5,6 @@
 class RoyalFlush
 {
 	public:
-		vector<Card> Validate(vector<Card> cards);
+		bool Validate(vector<Card> cards);
 };
 

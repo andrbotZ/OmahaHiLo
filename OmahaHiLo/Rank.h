@@ -12,6 +12,7 @@ class Rank
 	
 
 	public:
-		void Update(vector<Card> playerCards, vector<Card> boardCards);
+		void UpdateHighest(vector<Card> cards);
+		void UpdateLowest(vector<Card> cards);
 };
 
