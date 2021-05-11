@@ -3,6 +3,7 @@
 #include <vector>
 #include "Card.h"
 #include "RoyalFlush.h"
+#include "StraightFlush.h"
 
 class Rank
 {
@@ -14,5 +15,6 @@ class Rank
 	public:
 		void UpdateHighest(vector<Card> cards);
 		void UpdateLowest(vector<Card> cards);
+		vector<Card> SortCards(vector<Card> cards);
 };
 

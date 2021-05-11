@@ -147,6 +147,7 @@
     <ClCompile Include="OmahaIO.cpp" />
     <ClCompile Include="Rank.cpp" />
     <ClCompile Include="RoyalFlush.cpp" />
+    <ClCompile Include="StraightFlush.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
@@ -156,6 +157,7 @@
     <ClInclude Include="OmahaIO.h" />
     <ClInclude Include="Rank.h" />
     <ClInclude Include="RoyalFlush.h" />
+    <ClInclude Include="StraightFlush.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

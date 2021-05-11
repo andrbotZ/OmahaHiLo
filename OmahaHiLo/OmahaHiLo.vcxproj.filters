@@ -75,6 +75,9 @@
     <ClCompile Include="RoyalFlush.cpp">
       <Filter>Source Files\Rank</Filter>
     </ClCompile>
+    <ClCompile Include="StraightFlush.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OmahaIO.h">
@@ -96,6 +99,9 @@
       <Filter>Header Files\Rank</Filter>
     </ClInclude>
     <ClInclude Include="RoyalFlush.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="StraightFlush.h">
       <Filter>Header Files\Rank</Filter>
     </ClInclude>
   </ItemGroup>
