@@ -81,9 +81,26 @@ bool HandRank::VerifyAllDifferentSuits()
 			for (unsigned int j = i + 1; j < suit.length() ; j++) {
 				 
 					char ch2 = suit.at(j);
-					if (ch2 != ch1) return false;				 
+					if (ch2 == ch1) return false;				 
 			}
 		}
+
+	return true;
+}
+
+bool HandRank::VerifyAllCardsConsecutive()
+{
+
+	for (unsigned int i = 0; i < suit.length() - 1; i++) {
+
+		char ch1 = suit.at(i);
+
+		for (unsigned int j = i + 1; j < suit.length(); j++) {
+
+			char ch2 = suit.at(j);
+			if (ch2 == ch1) return false;
+		}
+	}
 
 	return true;
 }

@@ -17,6 +17,7 @@ protected:
 	bool VerifySameRank(int num);
 	bool VerifySameSuit(int num);
 	bool VerifyAllDifferentSuits();
+	bool VerifyAllCardsConsecutive();
 
 public:
 	virtual ~HandRank() = default;
