@@ -1,4 +1,5 @@
 #include"HandRank.h"
+#include <iostream>
 
 void HandRank:: SetSuitAndRank(vector<Card> cards) {
 	for (unsigned int i = 0; i < cards.size(); i++){
@@ -44,7 +45,7 @@ bool HandRank::VerifySameSuit(int num)
 {
 	int counter = 0;
 	if (num <= suit.length()) {
-		int testrank = suit.length() - num + 1;
+		 
 		for (unsigned int i = 0; i < suit.length() - num + 1; i++) {
 			counter = 1;
 			char ch1 = suit.at(i);
@@ -68,5 +69,22 @@ bool HandRank::VerifySameSuit(int num)
 		}
 	}
 	return false;
+}
+
+bool HandRank::VerifyAllDifferentSuits()
+{	 
+ 
+		for (unsigned int i = 0; i < suit.length() - 1; i++) {
+		 
+			char ch1 = suit.at(i);
+
+			for (unsigned int j = i + 1; j < suit.length() ; j++) {
+				 
+					char ch2 = suit.at(j);
+					if (ch2 != ch1) return false;				 
+			}
+		}
+
+	return true;
 }
 

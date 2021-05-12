@@ -16,6 +16,7 @@ protected:
 	void SetSuitAndRank(vector<Card> cards) ;
 	bool VerifySameRank(int num);
 	bool VerifySameSuit(int num);
+	bool VerifyAllDifferentSuits();
 
 public:
 	virtual ~HandRank() = default;

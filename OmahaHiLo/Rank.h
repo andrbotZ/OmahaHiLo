@@ -5,7 +5,7 @@
 #include"LowestRank.h"
 #include"ThreeOfKind.h"
 #include"Flush.h"
-
+#include"Straight.h"
 
 class Rank
 {

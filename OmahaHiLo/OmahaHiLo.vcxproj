@@ -149,12 +149,14 @@
     <ClCompile Include="OmahaIO.cpp" />
     <ClCompile Include="Rank.cpp" />
     <ClCompile Include="HandRank.cpp" />
+    <ClCompile Include="Straight.cpp" />
     <ClCompile Include="ThreeOfKind.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
     <ClInclude Include="Flush.h" />
     <ClInclude Include="HandRank.h" />
+    <ClInclude Include="Straight.h" />
     <ClInclude Include="LowestRank.h" />
     <ClInclude Include="OmahaBoard.h" />
     <ClInclude Include="OmahaGame.h" />

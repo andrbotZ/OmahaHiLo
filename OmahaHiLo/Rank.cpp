@@ -23,6 +23,14 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 			HighestRank = FlushType;
 		}
 	}
+
+	Straight straight;
+
+	if (straight.Validate(playerCards)) {
+		if (!CompareHighestRank(StraightType)) {
+			HighestRank = StraightType;
+		}
+	}
  
 }
  

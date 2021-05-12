@@ -1,15 +1,12 @@
 #pragma once
 #include <vector>
 #include <Regex>
+#include "HandRank.h"
 #include "Card.h"
 
-class Straight  
+class Straight : public HandRank
 {
-	private:
-	cmatch _suitMatch;
-	regex _suitRegex{ "cdhs" };
-	
-	public:
-		bool Validate(vector<Card> cards);
+public:
+	bool Validate(vector<Card> cards);
 };
 
