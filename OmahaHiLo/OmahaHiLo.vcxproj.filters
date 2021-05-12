@@ -81,6 +81,9 @@
     <ClCompile Include="HandRank.cpp">
       <Filter>Source Files\Rank</Filter>
     </ClCompile>
+    <ClCompile Include="Flush.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OmahaIO.h">
@@ -108,6 +111,9 @@
       <Filter>Header Files\Rank</Filter>
     </ClInclude>
     <ClInclude Include="ThreeOfKind.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="Flush.h">
       <Filter>Header Files\Rank</Filter>
     </ClInclude>
   </ItemGroup>

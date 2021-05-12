@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
+    <ClCompile Include="Flush.cpp" />
     <ClCompile Include="LowestRank.cpp" />
     <ClCompile Include="OmahaBoard.cpp" />
     <ClCompile Include="OmahaGame.cpp" />
@@ -152,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
+    <ClInclude Include="Flush.h" />
     <ClInclude Include="HandRank.h" />
     <ClInclude Include="LowestRank.h" />
     <ClInclude Include="OmahaBoard.h" />

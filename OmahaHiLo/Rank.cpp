@@ -15,6 +15,14 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 			HighestRank = ThreeOfaKindType;
 		}
 	}
+
+	Flush flush;
+
+	if (flush.Validate(playerCards)) {
+		if (!CompareHighestRank(FlushType)) {
+			HighestRank = FlushType;
+		}
+	}
  
 }
  

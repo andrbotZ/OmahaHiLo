@@ -4,6 +4,7 @@
 #include "Card.h"
 #include"LowestRank.h"
 #include"ThreeOfKind.h"
+#include"Flush.h"
 
 
 class Rank

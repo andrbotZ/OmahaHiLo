@@ -11,8 +11,8 @@ bool HandRank::VerifySameRank(int num)
 {
 
 	int counter = 0;
-	if (num < rank.length()) {
-		int testrank = rank.length() - num + 1;
+	if (num <= rank.length()) {
+	 
 		for (unsigned int i = 0; i < rank.length() - num + 1; i++) {
 			counter = 1;
 			char ch1 = rank.at(i);
@@ -26,7 +26,7 @@ bool HandRank::VerifySameRank(int num)
 					}
 
 				}
-				if (counter == 3) {
+				if (counter == num) {
 					return true;
 				}
 				counter = 1;
@@ -38,5 +38,35 @@ bool HandRank::VerifySameRank(int num)
 
 	return false;
 	 
+}
+
+bool HandRank::VerifySameSuit(int num)
+{
+	int counter = 0;
+	if (num <= suit.length()) {
+		int testrank = suit.length() - num + 1;
+		for (unsigned int i = 0; i < suit.length() - num + 1; i++) {
+			counter = 1;
+			char ch1 = suit.at(i);
+
+			for (unsigned int j = i + 1; j < suit.length() - num + 2; j++) {
+				for (unsigned int k = j; k < j + num - 1; k++) {
+					char ch2 = suit.at(k);
+					if (ch2 == ch1) {
+
+						counter++;
+					}
+
+				}
+				if (counter == num) {
+					return true;
+				}
+				counter = 1;
+
+
+			}
+		}
+	}
+	return false;
 }
 
