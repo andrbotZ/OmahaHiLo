@@ -34,7 +34,6 @@ void OmahaHand::CombineCards(vector<Card> boardCards)
 					tempCards.push_back(boardCards[j2]);
 					for (int j3 = j2 + 1; j3 < boardCards.size(); j3++) {
 						tempCards.push_back(boardCards[j3]);
-					//	tempCards = SortCards(tempCards);
 						rank.UpdateHighest(tempCards);
 						rank.UpdateLowest(tempCards);
 						tempCards.pop_back();

@@ -2,22 +2,43 @@
 #include <iostream>
 
 
-static const char* enum_str[] = { "Straight Flush", "Four Of Kind", "Full House", "Flush", "Straight", "Three Of Kind", "Two Pair", "One Pair", "High Card" };
+static const char* enum_str[] = { "None", "High Card", "One Pair", "Two Pair", "Three Of Kind", "Straight", "Flush","Full House", "Four Of Kind", "Straight Flush", "Royal Flush" };
 
 void Rank::UpdateHighest(vector<Card> playerCards)
 {
 	playerCards = SortCards(playerCards);
+
 	RoyalFlush royalFlush;
-	bool isRoyalFlush = royalFlush.Validate(playerCards);
+
+	if (royalFlush.Validate(playerCards)) {
+		CompareHighestRank(RoyalFlushType);
+	}
 
 	StraightFlush straightFlush;
-	bool isStraightFlush = straightFlush.Validate(playerCards);
+ 
+	if (straightFlush.Validate(playerCards)) {
+		CompareHighestRank(StraightFlushType);
+	}
 
 	FourOfKind fourOfKind;
-	bool isFourOfKind = fourOfKind.Validate(playerCards);
-	
+ 
+	if (fourOfKind.Validate(playerCards)) {
+		CompareHighestRank(FourOfaKindType);
+	}
+
 	FullHouse fullHouse;
-	bool isFullHouse = fullHouse.Validate(playerCards);
+ 
+	if (fullHouse.Validate(playerCards)) {
+		CompareHighestRank(FullHouseType);
+	}
+
+	ThreeOfKind threeOfaKindType;
+ 
+	if (threeOfaKindType.Validate(playerCards)) {
+		if (!CompareHighestRank(ThreeOfaKindType)) {
+			HighestRank = ThreeOfaKindType;
+		}
+	}
 
 }
  

@@ -6,11 +6,11 @@
 #include "StraightFlush.h"
 #include "FourOfKind.h"
 #include "FullHouse.h"
-
+#include "ThreeOfKind.h"
 class Rank
 {
-	enum  RankType { StraightFlushType, FourOfaKindType, FullHouseType, FlushType, StraightType, ThreeOfaKindType, TwoPairType, OnePairType, HighCardType};
 
+	enum  RankType { None, HighCardType, OnePairType, TwoPairType, ThreeOfaKindType, StraightType, FlushType, FullHouseType, FourOfaKindType, StraightFlushType, RoyalFlushType};
 
 	public:
 		

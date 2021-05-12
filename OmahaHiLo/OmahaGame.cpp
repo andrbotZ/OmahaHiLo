@@ -42,7 +42,6 @@ void OmahaGame::Play() {
 		if (winnerNum == 2) winnerHighestRank = player;
 		_players.at(player.name) = player;
 
-
 	}
  
 }
@@ -54,7 +53,7 @@ string OmahaGame::PrintResult() {
 }
 
 int OmahaGame::getHighestWinner(OmahaHand player1, OmahaHand player2) {
-	if (player1.rank.CompareHighestRank(player2.rank.HighestRank)) {
+	if (!player1.rank.CompareHighestRank(player2.rank.HighestRank)) {
 		return 2;
 	}
 	return 1;

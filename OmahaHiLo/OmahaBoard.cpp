@@ -17,9 +17,8 @@ void OmahaBoard::DealCards(list<string> data)
 void OmahaBoard::Play()
 {
 	for (vector<OmahaGame>::iterator _game_iterator = games.begin(); _game_iterator != games.end(); ++_game_iterator) {
-		OmahaGame game = *_game_iterator;
-		game.Play();
-	
+	 (*_game_iterator).Play();
+	//	game.Play();
 	}
 
 }
