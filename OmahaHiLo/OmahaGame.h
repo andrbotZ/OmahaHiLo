@@ -15,8 +15,8 @@ class OmahaGame {
 		OmahaHand _board;
 		Rank _rank;
 	private:
-		int getHighestWinner(OmahaHand player1, OmahaHand player2);
-
+		int getHighWinner(OmahaHand player1, OmahaHand player2);
+		int getLowWinner(OmahaHand player1, OmahaHand player2);
 	public:
 		OmahaHand winnerHighestRank;
 		OmahaHand winnerLowestRank;

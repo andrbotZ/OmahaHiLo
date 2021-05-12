@@ -18,7 +18,7 @@ void OmahaBoard::Play()
 {
 	for (vector<OmahaGame>::iterator _game_iterator = games.begin(); _game_iterator != games.end(); ++_game_iterator) {
 	 (*_game_iterator).Play();
-	//	game.Play();
+ 
 	}
 
 }

@@ -15,8 +15,7 @@ bool ThreeOfKind::Validate(vector<Card> cards)
 	}
 
 	int sum = 0;
-
-	std::cout << rank << '\n';
+ 
 	for (unsigned int i = 0; i < cards.size() - 1; i++)
 	{
 		if ((cards[i].value - cards[i + 1].value) == 0)

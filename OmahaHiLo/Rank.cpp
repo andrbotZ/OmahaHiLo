@@ -43,9 +43,17 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 }
  
 
-void Rank::UpdateLowest(vector<Card> cards)
+void Rank::UpdateLowest(vector<Card> playerCards)
 {
-	// std::cout << cards[0].rank + cards[0].suit + "-" + cards[1].rank + cards[1].suit + "-" + cards[2].rank + cards[2].suit + "-" + cards[3].rank + cards[3].suit + "-" + cards[4].rank + cards[4].suit << '\n';
+	playerCards = SortCards(playerCards);
+	LowestRank lowestRank;
+	int _rank = lowestRank.Convert(playerCards);
+
+	if (!CompareLowestRank(_rank)) {
+		LowestRankValue = _rank;
+	}
+	
+
 }
 
 bool Rank::CompareHighestRank(RankType rank)
@@ -57,6 +65,15 @@ bool Rank::CompareHighestRank(RankType rank)
 	return false;
 }
 
+bool Rank::CompareLowestRank(int rank)
+{
+	int one = LowestRankValue;
+	int two = rank;
+	if (one >= two) return true;
+
+	return false;
+}
+
 string Rank::GetHighestRank()
 {
 	string rank{ enum_str[HighestRank] };
@@ -64,10 +81,15 @@ string Rank::GetHighestRank()
 }
 
 string Rank::GetLowestRank()
-{
-
-	string rank{ enum_str[LowestRank] };
-	return rank;
+{	 
+	string str;
+	if (LowestRankValue == 0) {
+		str = "No hand qualified for Low";
+	}
+	else {
+		str = to_string(LowestRankValue);
+	}
+	return str;
 }
 
  

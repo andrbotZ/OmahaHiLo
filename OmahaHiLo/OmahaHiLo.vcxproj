@@ -144,6 +144,7 @@
     <ClCompile Include="FourOfKind.cpp" />
     <ClCompile Include="FullHouse.cpp" />
     <ClCompile Include="HighCard.cpp" />
+    <ClCompile Include="LowestRank.cpp" />
     <ClCompile Include="OmahaBoard.cpp" />
     <ClCompile Include="OmahaGame.cpp" />
     <ClCompile Include="OmahaHand.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="FourOfKind.h" />
     <ClInclude Include="FullHouse.h" />
     <ClInclude Include="HighCard.h" />
+    <ClInclude Include="LowestRank.h" />
     <ClInclude Include="OmahaBoard.h" />
     <ClInclude Include="OmahaGame.h" />
     <ClInclude Include="OmahaHand.h" />

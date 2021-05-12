@@ -102,6 +102,9 @@
     <ClCompile Include="OmahaHiLo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LowestRank.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OmahaIO.h">
@@ -150,6 +153,9 @@
       <Filter>Header Files\Rank</Filter>
     </ClInclude>
     <ClInclude Include="TwoPair.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="LowestRank.h">
       <Filter>Header Files\Rank</Filter>
     </ClInclude>
   </ItemGroup>

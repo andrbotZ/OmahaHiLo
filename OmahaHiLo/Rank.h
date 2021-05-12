@@ -7,6 +7,8 @@
 #include "FourOfKind.h"
 #include "FullHouse.h"
 #include "ThreeOfKind.h"
+#include "LowestRank.h"
+
 class Rank
 {
 
@@ -15,7 +17,7 @@ class Rank
 	public:
 		
 		RankType HighestRank;
-		RankType LowestRank;
+		int LowestRankValue;
 	
 
 	public:
@@ -23,6 +25,7 @@ class Rank
 		void UpdateLowest(vector<Card> cards);
 		vector<Card> SortCards(vector<Card> cards);
 		bool CompareHighestRank(RankType rank);
+		bool CompareLowestRank(int rank);	
 		string GetHighestRank();
 		string GetLowestRank();
 		
