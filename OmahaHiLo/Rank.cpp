@@ -11,7 +11,7 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 	ThreeOfKind threeOfaKind;
  
 	if (threeOfaKind.Validate(playerCards)) {
-		if (!CompareHighestRank(ThreeOfaKindType)) {
+		if (CompareHighestRank(ThreeOfaKindType) == 2) {
 			HighestRank = ThreeOfaKindType;
 		}
 	}
@@ -19,7 +19,7 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 	Flush flush;
 
 	if (flush.Validate(playerCards)) {
-		if (!CompareHighestRank(FlushType)) {
+		if (CompareHighestRank(FlushType) == 2) {
 			HighestRank = FlushType;
 		}
 	}
@@ -27,7 +27,7 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 	Straight straight;
 
 	if (straight.Validate(playerCards)) {
-		if (!CompareHighestRank(StraightType)) {
+		if (CompareHighestRank(StraightType) == 2) {
 			HighestRank = StraightType;
 		}
 	}
@@ -35,7 +35,7 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 	OnePair onePair;
 
 	if (onePair.Validate(playerCards)) {
-		if (!CompareHighestRank(OnePairType)) {
+		if (CompareHighestRank(OnePairType) == 2) {
 			HighestRank = OnePairType;
 		}
 	}
@@ -56,13 +56,13 @@ void Rank::UpdateLowest(vector<Card> playerCards)
 
 }
 
-bool Rank::CompareHighestRank(RankType rank)
+int  Rank::CompareHighestRank(RankType rank)
 {
 	int one = static_cast<int>(HighestRank);
 	int two = static_cast<int>(rank);
-	if (one > two) return true;
-
-	return false;
+	if (one > two) return 1;
+	else if (one == two) return 0;
+	return 2;
 }
 
 bool Rank::CompareLowestRank(int rank)
