@@ -31,6 +31,14 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 			HighestRank = StraightType;
 		}
 	}
+
+	OnePair onePair;
+
+	if (onePair.Validate(playerCards)) {
+		if (!CompareHighestRank(OnePairType)) {
+			HighestRank = OnePairType;
+		}
+	}
  
 }
  

@@ -87,6 +87,9 @@
     <ClCompile Include="Straight.cpp">
       <Filter>Source Files\Rank</Filter>
     </ClCompile>
+    <ClCompile Include="OnePair.cpp">
+      <Filter>Source Files\Rank</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="OmahaIO.h">
@@ -120,6 +123,9 @@
       <Filter>Header Files\Rank</Filter>
     </ClInclude>
     <ClInclude Include="Straight.h">
+      <Filter>Header Files\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="OnePair.h">
       <Filter>Header Files\Rank</Filter>
     </ClInclude>
   </ItemGroup>

@@ -7,6 +7,8 @@
 #include"Flush.h"
 #include"Straight.h"
 
+#include"OnePair.h"
+
 class Rank
 {
 

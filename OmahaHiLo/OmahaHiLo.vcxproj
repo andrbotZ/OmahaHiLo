@@ -147,6 +147,7 @@
     <ClCompile Include="OmahaHand.cpp" />
     <ClCompile Include="OmahaHiLo.cpp" />
     <ClCompile Include="OmahaIO.cpp" />
+    <ClCompile Include="OnePair.cpp" />
     <ClCompile Include="Rank.cpp" />
     <ClCompile Include="HandRank.cpp" />
     <ClCompile Include="Straight.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="Card.h" />
     <ClInclude Include="Flush.h" />
     <ClInclude Include="HandRank.h" />
+    <ClInclude Include="OnePair.h" />
     <ClInclude Include="Straight.h" />
     <ClInclude Include="LowestRank.h" />
     <ClInclude Include="OmahaBoard.h" />
