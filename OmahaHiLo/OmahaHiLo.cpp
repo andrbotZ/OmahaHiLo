@@ -19,18 +19,9 @@ int main(int argc, char** argv)
     string inputFile;
     string outputFile;
 
-    directory = argv[0];
+
     inputFile = argv[1];
-
-
-  //  directory = directory.substr(0, directory.find_last_of("\\/"));
-    cout << directory << endl;
-    std::replace(directory.begin(), directory.end(), '\\', '\/');
- //   inputFile = directory + '/' + inputFile;
     outputFile = argv[2];
- //   outputFile = directory + '/' + outputFile;
-  //  std::replace(outputFile.begin(), outputFile.end(), '\\', '/');
-    
 
     bool isOpened = omahoIO.OpenFile(inputFile);
     if (isOpened) {
@@ -42,10 +33,7 @@ int main(int argc, char** argv)
         omahaBoard.Play();
         vector<string> lines = omahaBoard.PrintResults();
         omahoIO.SaveResultsInFile(lines, outputFile);
-    }
-   
-
-   
+    }   
 }
  
 
