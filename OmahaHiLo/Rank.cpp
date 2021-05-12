@@ -32,13 +32,21 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 		CompareHighestRank(FullHouseType);
 	}
 
-	ThreeOfKind threeOfaKindType;
+	ThreeOfKind threeOfaKind;
  
-	if (threeOfaKindType.Validate(playerCards)) {
+	if (threeOfaKind.Validate(playerCards)) {
 		if (!CompareHighestRank(ThreeOfaKindType)) {
 			HighestRank = ThreeOfaKindType;
 		}
 	}
+
+	Straight straight;
+	if (straight.Validate(playerCards)) {
+		if (!CompareHighestRank(StraightType)) {
+			HighestRank = StraightType;
+		}
+	}
+
 
 }
  

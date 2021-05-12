@@ -8,6 +8,7 @@
 #include "FullHouse.h"
 #include "ThreeOfKind.h"
 #include "LowestRank.h"
+#include "Straight.h"
 
 class Rank
 {
