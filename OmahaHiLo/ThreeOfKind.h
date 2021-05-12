@@ -1,14 +1,11 @@
 #pragma once
 #include <vector>
 #include <Regex>
+#include "HandRank.h"
 #include "Card.h"
 
-class ThreeOfKind
+class ThreeOfKind : public HandRank
 {
-private:
-	cmatch _suitMatch;
-	regex _suitRegex{ "ccccc|ddddd|hhhhh|sssss" };
-
 public:
 	bool Validate(vector<Card> cards);
 };

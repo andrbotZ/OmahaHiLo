@@ -8,30 +8,6 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 {
 	playerCards = SortCards(playerCards);
 
-	RoyalFlush royalFlush;
-
-	if (royalFlush.Validate(playerCards)) {
-		CompareHighestRank(RoyalFlushType);
-	}
-
-	StraightFlush straightFlush;
- 
-	if (straightFlush.Validate(playerCards)) {
-		CompareHighestRank(StraightFlushType);
-	}
-
-	FourOfKind fourOfKind;
- 
-	if (fourOfKind.Validate(playerCards)) {
-		CompareHighestRank(FourOfaKindType);
-	}
-
-	FullHouse fullHouse;
- 
-	if (fullHouse.Validate(playerCards)) {
-		CompareHighestRank(FullHouseType);
-	}
-
 	ThreeOfKind threeOfaKind;
  
 	if (threeOfaKind.Validate(playerCards)) {
@@ -39,15 +15,7 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 			HighestRank = ThreeOfaKindType;
 		}
 	}
-
-	Straight straight;
-	if (straight.Validate(playerCards)) {
-		if (!CompareHighestRank(StraightType)) {
-			HighestRank = StraightType;
-		}
-	}
-
-
+ 
 }
  
 

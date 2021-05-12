@@ -2,13 +2,9 @@
 #include <string>
 #include <vector>
 #include "Card.h"
-#include "RoyalFlush.h"
-#include "StraightFlush.h"
-#include "FourOfKind.h"
-#include "FullHouse.h"
-#include "ThreeOfKind.h"
-#include "LowestRank.h"
-#include "Straight.h"
+#include"LowestRank.h"
+#include"ThreeOfKind.h"
+
 
 class Rank
 {
