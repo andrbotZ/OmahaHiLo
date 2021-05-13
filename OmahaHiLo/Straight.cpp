@@ -6,7 +6,7 @@
 bool Straight::Validate(vector<Card> cards)
 {
 	SetSuitAndRank(cards);
-	if (VerifyAllDifferentSuits()) {
+	if (!VerifySameRank(5)) {
 		if (VerifyAllCardsConsecutive(cards)) {
 			return true;
 		}

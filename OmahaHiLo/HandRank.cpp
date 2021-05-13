@@ -70,6 +70,12 @@ bool HandRank::VerifyNoSameRank()
 
 bool HandRank::VerifySameRank(int num)
 {
+
+
+	if (rank.compare("5432A") == 0) {
+
+		string ff;
+	}
 	int counter = 0;
 	if (num <= rank.length()) {
 
@@ -134,7 +140,7 @@ bool HandRank::VerifyAllDifferentSuits()
 {
 	int sum = 'c' + 'h' + 'd' + 's';
 	
-	if (rank.compare("432AA") == 0) {
+	if (rank.compare("5432A") == 0) {
 
 		string ff;
 	}
@@ -166,7 +172,10 @@ bool HandRank::VerifyAllDifferentSuits()
  
 bool HandRank::VerifyAllCardsConsecutive(vector<Card> cards)
 {
-		
+	if (rank.compare("5432A") == 0) {
+
+		string ff;
+	}
 	if (rank[0] == 'A') {
 		if (rank.compare("AKQJT") == 0) return true;
 		else {
@@ -179,18 +188,18 @@ bool HandRank::VerifyAllCardsConsecutive(vector<Card> cards)
 
 	else {
 		int diff = 0;
-		for (vector<Card>::iterator it = cards.begin(); it != cards.end(); ++it) {
-			Card card = *it;
+
+		for (int i = 0; i < cards.size() - 1; i++) {
 			
-			if (diff == 0) {
-				diff = diff + card.value;
+
+			if ((cards[i].value - cards[i + 1].value) == 1) {
+				diff++;
 			}
-			else {
-				diff = diff - card.value;
-				if (diff != 1) return false;
-			}
+
+			else { return false; }
 		}
-		if (diff == 1) return true;
+
+		if (diff == 4) return true;
 
 	}
 	return false;
