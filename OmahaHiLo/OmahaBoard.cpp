@@ -28,9 +28,14 @@ vector<string> OmahaBoard::PrintResults()
 	vector<string> gamesResults;
 
 	for (vector<OmahaGame>::iterator _game_iterator = games.begin(); _game_iterator != games.end(); ++_game_iterator) {
+		
 		OmahaGame game = *_game_iterator;
+		string data = game.rawData;
+		gamesResults.push_back(data);
 		string result = game.PrintResult();
 		gamesResults.push_back(result);
+		string empty = "";
+		gamesResults.push_back(empty);
 
 	}
 	return gamesResults;

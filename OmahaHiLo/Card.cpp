@@ -16,6 +16,7 @@ Card::Card(string card)
 	else if (rank.compare("K") == 0) value = 13;
 	else if (rank.compare("Q") == 0) value = 12;
 	else if (rank.compare("J") == 0) value = 11;
+	else if (rank.compare("T") == 0) value = 10;
 	else {
 		stringstream strValue(rank);
 		strValue >> value;

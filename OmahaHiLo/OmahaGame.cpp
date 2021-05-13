@@ -17,6 +17,7 @@ OmahaGame::OmahaGame(vector<string> playersNames, string boardName)
 
 void OmahaGame::DealCards(string data)
 {
+	rawData = data;
 	for (map<string, OmahaHand>::iterator it = _players.begin(); it != _players.end(); ++it) {
 		OmahaHand player = it -> second;
 		cmatch handAMatch;
@@ -52,8 +53,9 @@ void OmahaGame::Play() {
 }
 
 string OmahaGame::PrintResult() {
-
-	string result = winnerHighestRank.name + "wins Hi (" + winnerHighestRank.rank.GetHighestRank() + ") ; " + winnerLowestRank.name + "wins Lo ( " + winnerLowestRank.rank.GetLowestRank() +" )";
+	std::cout  << '\n';
+	std::cout << rawData << '\n';
+	string result = "=>  " + winnerHighestRank.name + "wins Hi (" + winnerHighestRank.rank.GetHighestRank() + ") ; " + winnerLowestRank.name + "wins Lo ( " + winnerLowestRank.rank.GetLowestRank() +" )";
 	std::cout << result << '\n';
 	return result;
 }

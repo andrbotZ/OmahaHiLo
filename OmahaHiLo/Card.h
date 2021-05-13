@@ -8,7 +8,7 @@ class Card
 {
 	private:
 		regex suitRegex {"([cdhs])"};
-		regex rankRegex { "([AKQJ0123456789]{1,2})" };
+		regex rankRegex { "([AKQJT0123456789]{1,2})" };
 		 
 
 	public:

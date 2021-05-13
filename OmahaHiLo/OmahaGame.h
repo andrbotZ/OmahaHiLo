@@ -18,6 +18,7 @@ class OmahaGame {
 		int getHighWinner(OmahaHand player1, OmahaHand player2);
 		int getLowWinner(OmahaHand player1, OmahaHand player2);
 	public:
+		string rawData;
 		OmahaHand winnerHighestRank;
 		OmahaHand winnerLowestRank;
 	public:
