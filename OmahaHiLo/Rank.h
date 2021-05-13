@@ -28,7 +28,7 @@ class Rank
 		void UpdateLowest(vector<Card> cards);
 		vector<Card> SortCards(vector<Card> cards);
 		int CompareHighestRank(RankType rank);
-		bool CompareLowestRank(int rank);	
+		int CompareLowestRank(int rank);	
 		string GetHighestRank();
 		string GetLowestRank();
 		

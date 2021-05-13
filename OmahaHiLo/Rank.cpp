@@ -58,11 +58,18 @@ void Rank::UpdateLowest(vector<Card> playerCards)
 {
 	playerCards = SortCards(playerCards);
 	LowestRank lowestRank;
-	int _rank = lowestRank.Convert(playerCards);
+	if (lowestRank.Validate(playerCards)) {
+		int _rank = lowestRank.result;
+		if (LowestRankValue == 0) {
+			LowestRankValue = _rank;
+		}
+		else {
+			if (LowestRankValue >= _rank) LowestRankValue = _rank;
+		}
 
-	if (!CompareLowestRank(_rank)) {
-		LowestRankValue = _rank;
 	}
+
+	
 	
 
 }
@@ -76,13 +83,14 @@ int  Rank::CompareHighestRank(RankType rank)
 	return 2;
 }
 
-bool Rank::CompareLowestRank(int rank)
+int Rank::CompareLowestRank(int rank)
 {
+ 
 	int one = LowestRankValue;
 	int two = rank;
-	if (one >= two) return true;
+	if (one <= two) return 1;
 
-	return false;
+	return 2;
 }
 
 string Rank::GetHighestRank()

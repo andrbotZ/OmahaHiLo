@@ -35,18 +35,26 @@ void OmahaGame::DealCards(string data)
 
 void OmahaGame::Play() {
 	for (map<string, OmahaHand>::iterator it = _players.begin(); it != _players.end(); ++it) {
-		OmahaHand player = it->second;
+		//OmahaHand player = it->second;
 	
-		player.CombineCards(_board.cards);
+		it->second.CombineCards(_board.cards);
 
-		int winnerNum = getHighWinner(winnerHighestRank, player);
-		if (winnerNum == 2) winnerHighestRank = player;
+ 
+		int winnerNum = winnerHighestRank.rank.CompareHighestRank(it->second.rank.HighestRank);
+
+		if (winnerNum == 2) winnerHighestRank = it->second;
+
+		if (winnerLowestRank.rank.LowestRankValue == 0) {
+			winnerLowestRank = it->second;
+		}
+		else {
+			winnerNum = winnerLowestRank.rank.CompareLowestRank(it->second.rank.LowestRankValue);
+
+			if (winnerNum == 2) winnerLowestRank = it->second;
+		}
 
 
-		winnerNum = getLowWinner(winnerLowestRank, player);
-		if (winnerNum == 2) winnerLowestRank = player;
-
-		_players.at(player.name) = player;
+		_players.at(it->second.name) = it->second;
 
 	}
  
@@ -60,13 +68,4 @@ string OmahaGame::PrintResult() {
 	return result;
 }
 
-int OmahaGame::getHighWinner(OmahaHand player1, OmahaHand player2) {
-	return player1.rank.CompareHighestRank(player2.rank.HighestRank);
-}
-
-int OmahaGame::getLowWinner(OmahaHand player1, OmahaHand player2) {
-	if (!player1.rank.CompareLowestRank(player2.rank.LowestRankValue)) {
-		return 2;
-	}
-	return 1;
-}
+ 

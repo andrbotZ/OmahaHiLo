@@ -12,7 +12,7 @@ Card::Card(string card)
 	suit = suitMatch.str();
 	rank = rankMatch.str();
 
-	if (rank.compare("A") == 0) value = 100;
+	if (rank.compare("A") == 0) value = 1;
 	else if (rank.compare("K") == 0) value = 13;
 	else if (rank.compare("Q") == 0) value = 12;
 	else if (rank.compare("J") == 0) value = 11;
