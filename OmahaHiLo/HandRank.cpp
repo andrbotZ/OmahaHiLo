@@ -172,12 +172,12 @@ bool HandRank::VerifyAllDifferentSuits()
  
 bool HandRank::VerifyAllCardsConsecutive(vector<Card> cards)
 {
-	if (rank.compare("5432A") == 0) {
+	if (rank.compare("KQJTA") == 0) {
 
 		string ff;
 	}
-	if (rank[0] == 'A') {
-		if (rank.compare("AKQJT") == 0) return true;
+	if (rank[4] == 'A') {
+		if (rank.compare("KQJTA") == 0) return true;
 		else {
 			int sum = rank[1] + rank[2] + rank[3] + rank[4] - '2' - '3' - '4' - '5';
 			if (sum == 0) {
