@@ -4,9 +4,20 @@
 
 static const char* enum_str[] = { "None", "High Card", "One Pair", "Two Pair", "Three Of Kind", "Straight", "Flush","Full House", "Four Of Kind", "Straight Flush", "Royal Flush" };
 
+void Rank::printCards(vector<Card> cards)
+{
+	for (vector<Card>::iterator it = cards.begin(); it != cards.end(); ++it) {
+		Card card = *it;
+		std::cout << card.rank + card.suit + "-" ;
+
+	}
+	std::cout << '\n';
+}
+
 void Rank::UpdateHighest(vector<Card> playerCards)
 {
 	playerCards = SortCards(playerCards);
+	printCards(playerCards);
 
 	ThreeOfKind threeOfaKind;
  

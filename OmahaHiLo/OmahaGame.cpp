@@ -55,7 +55,7 @@ void OmahaGame::Play() {
 string OmahaGame::PrintResult() {
 	std::cout  << '\n';
 	std::cout << rawData << '\n';
-	string result = "=>  " + winnerHighestRank.name + "wins Hi (" + winnerHighestRank.rank.GetHighestRank() + ") ; " + winnerLowestRank.name + "wins Lo ( " + winnerLowestRank.rank.GetLowestRank() +" )";
+	string result = "=>  " + winnerHighestRank.name + " wins Hi (" + winnerHighestRank.rank.GetHighestRank() + ") ; " + winnerLowestRank.name + " wins Lo ( " + winnerLowestRank.rank.GetLowestRank() +" )";
 	std::cout << result << '\n';
 	return result;
 }

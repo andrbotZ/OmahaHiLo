@@ -7,7 +7,7 @@ class LowestRank
 {
 	private:
 		cmatch _rankMatch;
-		regex _rankRegex{ "[KQJ09]" };
+		regex _rankRegex{ "[KQJT9]" };
 
 	public:
 		int Convert(vector<Card> cards);

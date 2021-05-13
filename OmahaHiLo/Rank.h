@@ -14,6 +14,9 @@ class Rank
 
 	enum  RankType { None, HighCardType, OnePairType, TwoPairType, ThreeOfaKindType, StraightType, FlushType, FullHouseType, FourOfaKindType, StraightFlushType, RoyalFlushType};
 
+	private:
+		void printCards(vector<Card> cards);
+
 	public:
 		
 		RankType HighestRank;
