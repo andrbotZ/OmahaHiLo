@@ -17,8 +17,7 @@ void Rank::printCards(vector<Card> cards)
 void Rank::UpdateHighest(vector<Card> playerCards)
 {
 	playerCards = SortCards(playerCards);
-	printCards(playerCards);
-
+ 
 	ThreeOfKind threeOfaKind;
  
 	if (threeOfaKind.Validate(playerCards)) {

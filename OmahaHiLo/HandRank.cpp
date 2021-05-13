@@ -8,47 +8,7 @@ void HandRank:: SetSuitAndRank(vector<Card> cards) {
 	}
 }
 
-//bool HandRank::VerifySameRank(int num)
-//{
-//	int counter = 0;
-//	bool noSameRank = false;
-//	if (num == 1) noSameRank = true;
-//
-//	if (num <= rank.length()) {
-//
-//		for (unsigned int i = 0; i < rank.length() - num + 1; i++) {
-//			
-//			counter = 1;	
-//			char ch1 = rank.at(i);
-//
-//			for (unsigned int j = i + 1; j < rank.length() - num + 2; j++) {
-//				for (unsigned int k = j; k < j + num - 1; k++) {
-//					char ch2 = rank.at(k);
-//					if (ch2 == ch1) {
-//						if (noSameRank) {
-//							return false;
-//						}
-//						counter++;
-//					}
-//
-//				}
-//		
-//				if (!noSameRank && counter == num ) {
-//					return true;
-//				}
-//				counter = 1;
-//
-//			}
-//			
-//		}
-//		if (noSameRank && counter == 1) {
-//			return true;
-//		}
-//	}
-//
-//	return false;
-//
-//}
+ 
 bool HandRank::VerifyNoSameRank()
 {
 		for (unsigned int i = 0; i < rank.length() - 1 ; i++) {
@@ -71,11 +31,7 @@ bool HandRank::VerifyNoSameRank()
 bool HandRank::VerifySameRank(int num)
 {
 
-
-	if (rank.compare("5432A") == 0) {
-
-		string ff;
-	}
+ 
 	int counter = 0;
 	if (num <= rank.length()) {
 
@@ -140,10 +96,7 @@ bool HandRank::VerifyAllDifferentSuits()
 {
 	int sum = 'c' + 'h' + 'd' + 's';
 	
-	if (rank.compare("5432A") == 0) {
-
-		string ff;
-	}
+ 
 	int sumSuit = 0;
 	vector<int> vectorA;
 	for (unsigned int i = 0; i < rank.length(); i++) {
@@ -172,10 +125,7 @@ bool HandRank::VerifyAllDifferentSuits()
  
 bool HandRank::VerifyAllCardsConsecutive(vector<Card> cards)
 {
-	if (rank.compare("KQJTA") == 0) {
-
-		string ff;
-	}
+ 
 	if (rank[4] == 'A') {
 		if (rank.compare("KQJTA") == 0) return true;
 		else {
