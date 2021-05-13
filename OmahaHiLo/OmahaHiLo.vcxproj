@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="Flush.cpp" />
+    <ClCompile Include="FullHouse.cpp" />
     <ClCompile Include="LowestRank.cpp" />
     <ClCompile Include="OmahaBoard.cpp" />
     <ClCompile Include="OmahaGame.cpp" />
@@ -156,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="Card.h" />
     <ClInclude Include="Flush.h" />
+    <ClInclude Include="FullHouse.h" />
     <ClInclude Include="HandRank.h" />
     <ClInclude Include="OnePair.h" />
     <ClInclude Include="Straight.h" />

@@ -49,6 +49,14 @@ void Rank::UpdateHighest(vector<Card> playerCards)
 			HighestRank = OnePairType;
 		}
 	}
+
+	FullHouse fullHouse;
+
+	if (fullHouse.Validate(playerCards)) {
+		if (CompareHighestRank(FullHouseType) == 2) {
+			HighestRank = FullHouseType;
+		}
+	}
  
 }
  

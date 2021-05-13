@@ -6,6 +6,7 @@
 #include"ThreeOfKind.h"
 #include"Flush.h"
 #include"Straight.h"
+#include"FullHouse.h"
 
 #include"OnePair.h"
 

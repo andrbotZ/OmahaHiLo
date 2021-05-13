@@ -1,5 +1,6 @@
 #include"HandRank.h"
 #include <iostream>
+#include <map>
 
 void HandRank:: SetSuitAndRank(vector<Card> cards) {
 	for (unsigned int i = 0; i < cards.size(); i++){
@@ -30,8 +31,6 @@ bool HandRank::VerifyNoSameRank()
 
 bool HandRank::VerifySameRank(int num)
 {
-
- 
 	int counter = 0;
 	if (num <= rank.length()) {
 
@@ -59,6 +58,27 @@ bool HandRank::VerifySameRank(int num)
 
 	return false;
 
+}
+
+bool HandRank::VerifySameRank(int num1, int num2)
+{
+	map<char, int> dublicates;
+	for (int i = 0; i < rank.length(); i++) {
+		dublicates[rank[i]]++;
+	}
+
+	if (dublicates.size() == 2) {
+
+		int sum = 0;
+		for (auto it : dublicates) {
+			if (it.second > 1)
+				sum = sum + it.second;
+		}
+		if (sum ==(num1 + num2)) return true;
+	}
+ 
+
+	return false;
 }
 
 bool HandRank::VerifySameSuit(int num)
@@ -129,10 +149,7 @@ bool HandRank::VerifyAllCardsConsecutive(vector<Card> cards)
 	if (rank[4] == 'A') {
 		if (rank.compare("KQJTA") == 0) return true;
 		else {
-			int sum = rank[1] + rank[2] + rank[3] + rank[4] - '2' - '3' - '4' - '5';
-			if (sum == 0) {
-				return true;
-			}
+			if (rank.compare("5432A") == 0) return true;
 		}
 	}
 

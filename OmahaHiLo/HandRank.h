@@ -15,6 +15,7 @@ protected:
 protected:
 	void SetSuitAndRank(vector<Card> cards) ;
 	bool VerifySameRank(int num);
+	bool VerifySameRank(int num,int num2);
 	bool VerifyNoSameRank();
 	bool VerifySameSuit(int num);
 	bool VerifyAllDifferentSuits();
