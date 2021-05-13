@@ -134,31 +134,36 @@ bool HandRank::VerifyAllDifferentSuits()
 {
 	int sum = 'c' + 'h' + 'd' + 's';
 	
+	if (rank.compare("432AA") == 0) {
 
-	for (unsigned int i = 0; i < rank.length() - 1; i++) {
-
-		char ch1 = rank.at(i);
+		string ff;
+	}
+	int sumSuit = 0;
+	vector<int> vectorA;
+	for (unsigned int i = 0; i < rank.length(); i++) {
+	
+		
 
 		if (rank[i] == 'A') {
-			int sumSuit = 0;
-			int suitA = suit.at(i);
-
-			for (unsigned int j = 0; j < suit.length(); j++) {
-
-				char ch2 = suit.at(j);
-				sumSuit = sumSuit + ch2;
-			}
-			sumSuit  = sumSuit - suitA;
-			if (sum == sumSuit) {
-				return true;
-			} 
+			vectorA.push_back(suit.at(i));
 		}
 
+		sumSuit = sumSuit + suit.at(i);
+		 
+
+
+		}
+	if (vectorA.size() != 0) {
+		for (int i = 0; i < vectorA.size(); i++) {
+			int test = sumSuit - vectorA[i];
+			if (test == sum) return true;
+		}
 	}
 
 	return false;
 }
 
+ 
 bool HandRank::VerifyAllCardsConsecutive(vector<Card> cards)
 {
 		
